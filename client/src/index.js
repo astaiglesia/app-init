@@ -6,9 +6,15 @@
  * @date    2022
  * @description The React application's entry point to the DOM.
  * ReactDOM hangs our app onto #root 
+ * 
+ * to implement Redux and React Router
+ * - install react-redux and react-router-dom libraries 
+ * - set up a redux store
+ * - uncomment as necessary below 
  *
  * ********************************************************
  */
+
 // ---libraries
 import React from 'react';
 import { render } from 'react-dom';
@@ -16,20 +22,17 @@ import { render } from 'react-dom';
 // import { BrowserRouter } from 'react-router-dom';
 
 // ---assets
-import './assets/stylesheets/styles.css';
 // import store from './app/store';
 
 // ---components
 import App from './App';
 
-render(<App/>, document.getElementById('root'));
-
-// main application wrapped with redux store provider and BrowserRouter [v6 router]
-// render( 
+// wrapped with redux store provider and BrowserRouter [v6 router]
+render( 
 //   <BrowserRouter>
 //     <Provider store={store}>
-//       <App/>
+      <App/>,
 //     </Provider>
 //   </BrowserRouter>,
-//   document.getElementById('root')
-// );
+  document.getElementById('root')
+);
